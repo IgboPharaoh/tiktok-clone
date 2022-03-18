@@ -9,15 +9,16 @@
 }
 html{
   scroll-snap-type: y mandatory;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 .app__videos{
   position: relative;
-  height: 800px;
+  height: 100vh;
   overflow: scroll;
   width: 80%;
   max-width: 500px;
   scroll-snap-type: y mandatory;
+  border-radius: 20px;
 }
 .app__videos::-webkit-scrollbar{
   display: none
