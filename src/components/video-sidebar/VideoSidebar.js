@@ -6,23 +6,23 @@ import MessageIcon from '@mui/icons-material/Message';
 import ShareIcon from '@mui/icons-material/Share';
 
 
-const VideoSidebar = () => {
+const VideoSidebar = ({likes, shares, messages}) => {
   const [liked, setLiked] = useState(false)
   return (
     <div className="videosidebar">
       <div className="videosidebar__button" >
         {
-          liked ? <FavoriteIcon onChange={(e) => setLiked(false)} /> : <FavoriteBorderIcon onChange={(e) => setLiked(true)} />
+          liked ? <FavoriteIcon fontSize="Large" onClick={(e) => setLiked(false)} /> : <FavoriteBorderIcon onClick={(e) => setLiked(true)} />
         }
-        <p>300</p>
+        <p>{liked ? likes + 1 : likes}</p>
       </div>
       <div className="videosidebar__button" >
         <MessageIcon/>
-        <p>230</p>
+        <p>{messages}</p>
       </div>
       <div className="videosidebar__button" >
         <ShareIcon/>
-        <p>10</p>
+        <p>{shares}</p>
       </div>
     </div>
   )

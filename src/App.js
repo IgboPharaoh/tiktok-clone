@@ -5,7 +5,15 @@ function App() {
   return (
     <div className="App">
       <div className="app__videos">
-        <Video/>
+        <Video
+          url
+          channel
+          description
+          song
+          likes
+          messages
+          shares
+        />
         <Video/>
         <Video/>
         <Video/>
